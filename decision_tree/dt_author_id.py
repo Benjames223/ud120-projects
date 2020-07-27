@@ -24,8 +24,15 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
-
-
+from sklearn import tree
+clf=tree.DecisionTreeClassifier()
+clf=clf.fit(features_train, labels_train)
+pred=clf.predict(features_test)
+from sklearn.metrics imoprt accuracy_score
+acc_min_samples_split_40=accuracy_score(labels_test,pred)
+def submitAccuracies():
+    return {"acc_min_samples_split_40":round(acc_min_samples_split_40,3)}
+             
 #########################################################
 
 
